@@ -48,7 +48,7 @@ const Cart = () => {
              
               />
               <div className={classes.btn_container}>
-                <button onClick={()=>increment(item.id)}><IoIosArrowUp size={"30px"} /></button>
+                <button onClick={()=>increment(item)}><IoIosArrowUp size={"30px"} /></button>
                 <span> {item.amount}</span>
                 <button className={classes.btn} onClick={()=>decrement(item.id)}><IoIosArrowDown  size={"30px"} /></button>
               </div>

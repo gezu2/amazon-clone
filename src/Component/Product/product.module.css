@@ -3,7 +3,7 @@
   grid-template-columns: repeat(auto-fill,minmax(170px,5fr));
   max-width: 1550px;
   gap: 10px;
-  margin: 90px 90px 100px 100px;
+  margin: 90px 100px;
   justify-items: center;
 }
 .product_container section {

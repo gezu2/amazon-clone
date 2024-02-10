@@ -10,7 +10,7 @@ import classes from './Results.module.css';
 
 const Results = () => {
   const [results, setResults] = useState();
-  const { categoryName } = useParams();
+  const { categoryName} = useParams();
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {

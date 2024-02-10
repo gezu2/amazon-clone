@@ -2,14 +2,14 @@ const CategoryInfos = [
   {
     title: "electronics",
     name: "electronics",
-    imgLink: "https://m.media-amazon.com/images/I/812ra5w6qUL._AC_UY327_FMwebp_QL65_.jpg"
+    imgLink: "https://m.media-amazon.com/images/I/51QeS0jkx-L._AC_UY327_FMwebp_QL65_.jpg"
 
    },
 
   {
     title: "women's clothing",
     name: "women's clothing",
-    imgLink: "https://m.media-amazon.com/images/I/51NhaeORTHL._AC_UL480_FMwebp_QL65_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/51jA7OohmWL._MCnd_AC_UL480_QL65_.jpg",
   },
 
   {
@@ -21,7 +21,7 @@ const CategoryInfos = [
   {
     title: "jewelery",
     name: "jewelery",
-    imgLink: "https://m.media-amazon.com/images/I/61-gy1tOuYL._AC_UL480_FMwebp_QL65_.jpg",
+    imgLink: "https://m.media-amazon.com/images/I/61Lusp+vjGL._AC_UL480_FMwebp_QL65_.jpg",
     
   },
 ];

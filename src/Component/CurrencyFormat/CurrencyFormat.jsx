@@ -1,16 +1,4 @@
 /* eslint-disable react/prop-types */
-// /* eslint-disable react/prop-types */
-// import numeral from "numeral"
-// const CurrencyFormat = (amount) => {
-//   const formattedAmount=numeral(amount).format("$0,0.00")
-//   return (
-//     <div>{formattedAmount}</div>
-//   )
-// }
-
-// export default CurrencyFormat
-
-
 import numeral from "numeral";
 const CurrencyFormat = ({ amount }) => {
   // Check if the amount is a valid number

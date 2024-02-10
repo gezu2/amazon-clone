@@ -3,18 +3,18 @@ import classes from "./Header.module.css";
 import { FaSearch, FaCartArrowDown } from "react-icons/fa";
 import LowerHeader from "./LowerHeader";
 import { Link } from "react-router-dom";
+import{auth} from '../../Utility/firebase'
 import { useContext } from "react";
 import { DataContext } from "../DataProvider/DataProvider";
-import amazonLogo from '../../assets/images/img1.png'
+import amazonLogo from "../../assets/images/img1.png";
 import { MdLocationOn } from "react-icons/md";
 
 const Header = () => {
+  const [{ user, basket }, dispacth] = useContext(DataContext);
 
-  const [{basket}, dispacth] = useContext(DataContext)
-
-  const totalItem=basket?.reduce((amount,item)=>{
-    return item.amount+amount
-  },0)
+  const totalItem = basket?.reduce((amount, item) => {
+    return item.amount + amount;
+  }, 0);
 
   return (
     <section className={classes.fixed}>
@@ -24,14 +24,13 @@ const Header = () => {
           <div className={classes.log__container}>
             <Link to="/">
               {" "}
-              <img
-                src={amazonLogo}
-                alt="amazonLogo"
-              />
+              <img src={amazonLogo} alt="amazonLogo" />
             </Link>
           </div>
           {/* {delivery} */}
-          <span><MdLocationOn/></span>
+          <span>
+            <MdLocationOn />
+          </span>
           <div className={classes.delivery}>
             <p>Delivered to</p>
             <span>Ethiopia</span>
@@ -57,9 +56,22 @@ const Header = () => {
               </select>
             </div>
             {/* {three components} */}
-            <Link to="/auth">
+            <Link to={!user && "/auth"}>
+              <div>
+                {user ? (
+                  <>
+                  <p>Hello {user?.email?.split("@")[0]}</p>
+                  <span onClick={()=>auth.signOut()}>Sign Out</span>
+                  </>
+                ) : (
+                  <>
+                  <p> hello,Sign In</p>
+                  <span> Account & Lists</span>
+                  </>
+                )}
+              </div>
               <p>Sign</p>
-              <span>Account & Lists</span>
+              {/* <span>Account & Lists</span> */}
             </Link>
             {/* {order} */}
             <Link to="/orders">

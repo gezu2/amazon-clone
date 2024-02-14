@@ -1,6 +1,9 @@
+import firebase from "firebase/compat/app";
+import { getAuth } from "firebase/auth";
+import "firebase/compat/firestore";
+import "firebase/compat/auth";
 
-
-// // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 // const firebaseConfig = {
 //   apiKey: "AIzaSyDv0iGlPHjlA3vONy0ahjzkRWMG-_qrejA",
 //   authDomain: "clone-51ece.firebaseapp.com",
@@ -11,15 +14,13 @@
 // };
 
 // // Initialize Firebase
+// // const app = firebase.initializeApp(firebaseConfig);
 // const app = firebase.initializeApp(firebaseConfig);
 // export const auth = getAuth(app);
 // export const db = app.firestore();
 
 
-import firebase from "firebase/compat/app";
-import { getAuth } from "firebase/auth";
-import "firebase/compat/firestore";
-import "firebase/compat/auth";
+
 
 
 

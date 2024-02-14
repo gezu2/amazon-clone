@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate ,useLocation} from "react-router-dom";
 import Layout from "../../Component/Layout/Layout";
 import classes from "./Signup.module.css";
 import amazonim from "../../assets/images/amazon.jpg";
@@ -18,10 +18,12 @@ const Auth = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState({ signIn: false, signUp: false });
   const navigate = useNavigate();
+  const navStateData=useLocation();
+  //console.log(navStateData);
 
   const authHandler = async (e) => {
     e.preventDefault();
-    if (e.target.name === "signin") {
+   if (e.target.name === "signin") {
       setLoading({ ...loading, signIn: true });
       signInWithEmailAndPassword(auth, email, password)
         .then((userInfo) => {
@@ -31,7 +33,7 @@ const Auth = () => {
             user: userInfo.user,
           });
           setLoading({ ...loading, signIn: false });
-          navigate("/");
+          navigate(navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
@@ -47,7 +49,7 @@ const Auth = () => {
             user: userInfo.user,
           });
           setLoading({ ...loading, signUp: false });
-          navigate("/");
+          navigate( navStateData?.state?.redirect || "/");
         })
         .catch((err) => {
           setError(err.message);
@@ -67,6 +69,15 @@ const Auth = () => {
         {/* form */}
         <div className={classes.login__container}>
           <h1>Sign In</h1>
+          { navStateData?.state?.msg &&
+            <small style={{
+              padding:"5px",
+              textAlign:"center",
+              color:"red",
+              fontWeight:"bold",
+            }}
+            >{navStateData?.state?.msg}</small>
+          }
           <form action="">
             <div>
               <label htmlFor="email">Email: </label>

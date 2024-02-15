@@ -61,11 +61,11 @@ h3 {
   bottom: 0;
   
 }
-.butto:hover {
+.button:hover {
   background-color: var(--primary-shade);
 } */
 
-.butto {
+.button {
   text-align: center;
   opacity: 0; /* Set initial opacity to 0 */
   padding: 5px 10px;
@@ -82,12 +82,12 @@ h3 {
   transition: opacity 0.2s; /* Add a smooth transition effect */
 }
 
-.butto:hover {
+.button:hover {
   opacity: 1; /* Set opacity to 1 when hovered */
   background-color: var(--primary-shade);
 }
 
-.card__container:hover.butto {
+.card__container:hover.button {
   display: block;
 }
 
@@ -103,7 +103,7 @@ h3 {
 .product__flexed h3{
   padding: 20px 0px;
 }
-.product__flexed .butto{
+.product__flexed .button{
   display: block;
   position: static;
   width: 150px;

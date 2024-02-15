@@ -35,7 +35,7 @@ const Payment = () => {
       setProcessing(true);
       const response = await axiosInstance({
         method: "POST",
-        url: `/payment/create?total= ${total * 100}`,
+        url: `/payment/create?total=${total * 100}`,
       });
       console.log(response.data);
       const clientSecret = response.data?.clientSecret;

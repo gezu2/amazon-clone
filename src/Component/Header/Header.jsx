@@ -28,12 +28,17 @@ const Header = () => {
             </Link>
           </div>
           {/* {delivery} */}
-          <span>
-            <MdLocationOn />
-          </span>
+      
           <div className={classes.delivery}>
+          <div style={{width:"20px", size:"23px"}}>
+         
+            <MdLocationOn />
+         
+          </div>
+          <div>
             <p>Delivered to</p>
             <span>Ethiopia</span>
+            </div>
           </div>
           <div className={classes.search}>
             {/* {Search} */}

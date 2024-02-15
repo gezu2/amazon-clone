@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 
 const { onRequest } = require("firebase-functions/v2/https");

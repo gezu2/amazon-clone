@@ -59,7 +59,7 @@ const Auth = () => {
   };
 
   return (
-    <Layout>
+    <>
       <section className={classes.login}>
         {/* logo */}
         <Link to="/">
@@ -137,7 +137,7 @@ const Auth = () => {
           )}
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 

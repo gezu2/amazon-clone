@@ -5,16 +5,16 @@
   padding: 20px 0;
 }
 
+
+
 .top {
   background-color: #485769;
   margin-top: 20px;
   padding-top: 10px;
   text-align: center;
-
 }
-.top h3{
+.top h3 {
   color: white !important;
-
 }
 
 .footer__container {
@@ -28,8 +28,8 @@
 }
 
 .footer__section {
-  flex: 1;
-  margin-right:220px;
+  flex: 1; 
+  margin-right: 220px;
   list-style: none;
 }
 
@@ -65,6 +65,6 @@
 .footer__copyright {
   font-size: 12px;
 }
-.footer__heading h3{
+.footer__heading h3 {
   margin-right: 80px !important;
 }

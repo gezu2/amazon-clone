@@ -82,7 +82,8 @@ const Payment = () => {
 
           <div> {user?.email}</div>
           <div> 123 react</div>
-          <div> addis abeba</div>
+          <div> Ethiopia</div>
+          <div> Addis Abeba</div>
         </div>
         <hr />
         {/* product */}

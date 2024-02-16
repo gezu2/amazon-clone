@@ -1,11 +1,13 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import classes from './Product.module.css';
 import { Rating } from "@mui/material";
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat";
 import { DataContext } from "../DataProvider/DataProvider";
 import {useContext} from 'react'
 import {Type} from '../../Utility/actiontype'
+ //import classes from "./Product.module.css";
+ import classes from"./productCard.module.css"
+
 
 
 const ProductCard = ({ product,flex ,renderDesc,renderAdd}) => {
